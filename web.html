@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM2.5 web application</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Big Data Analytics:a case of IoT data for air quality </h1>
+    <p></p>
+</div>
+
+<div class="navbar">
+    <a href="#">Literature Review</a>
+    <a href="tableau.html">PM2.5 visualization</a>
+    <div class="dropdown">
+        <button class="dropbtn">PM2.5 forecasting</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showImage('bj.jpg')">Beijing</a>
+            <a href="#" onclick="showImage('sh.jpg')">Shanghai</a>
+            <a href="#" onclick="showImage('gz.jpg')">Guangzhou</a>
+            <a href="#" onclick="showImage('cd.jpg')">Chengdu</a>
+            <a href="#" onclick="showImage('sy.jpg')">Shenyang</a>
+            <a href="#" onclick="showImage('average.jpg')">National</a>
+        </div>
+    </div>
+</div>
+
+<div class="body">
+    <div class="content">
+        <iframe src="lr.html" width="100%" height="600px"></iframe>
+    </div>
+
+</div>
+
+<div class="footer">
+    <div class ="block">
+    <a class="bottom" href="#">Back to top</a>
+    </div>
+    <h2>Bottom</h2>
+</div>
+
+<div id="popup" style="display: none;">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img id="popup-img" src="" alt="">
+</div>
+
+<script>
+    // JavaScript 代码
+    function showImage(imageUrl) {
+        var popup = document.getElementById("popup");
+        var popupImg = document.getElementById("popup-img");
+        popup.style.display = "block";
+        popupImg.src = imageUrl;
+    }
+
+    function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
